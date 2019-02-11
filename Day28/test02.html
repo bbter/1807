@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #con{
+            width: 400px;
+            height: 50px;
+            border: 1px black solid;
+        }
+    </style>
+</head>
+<body>
+用户名:<input type="text" id="username">
+密码:<input type="password" id="password">
+年龄: <input type="text" id="age">
+<button id="btn_submit">提交</button>
+<div id="con">
+
+</div>
+</body>
+<script src="../Day25/jquery-3.3.1.js"></script>
+<script>
+    $("#btn_submit").bind("click",function () {
+        data = {
+            username:$("#username").val(),
+            password:$("#password").val(),
+            age:$("#age").val(),
+        };
+        $.ajax({
+            url:"http://10.31.156.17/ajax_js_post.php",
+            type:"POST",
+            data:data,
+            success:function (response) {
+                $("#con").text(response)
+            }
+        })
+    })
+</script>
+</html>

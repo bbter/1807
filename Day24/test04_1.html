@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div{
+            width: 500px;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
+    <script type="text/javascript">
+        function qian() {
+            window.history.forward();
+        }
+        function hou() {
+            window.history.back();
+        }
+        function qian02() {
+            window.history.go(2);
+        }
+
+        function to_test04_2() {
+            window.location.href = "test04_2.html"
+        }
+        function to_test04_3() {
+            window.location.href = "test04_3.html"
+        }
+        function to_test04_4() {
+            window.location.href = "test04_4.html"
+        }
+
+
+    </script>
+</head>
+<body>
+    <div>
+        <button onclick="to_test04_2()">test04_2</button>
+        <button onclick="to_test04_3()">test04_3</button>
+        <button onclick="to_test04_4()">test04_4</button>
+        <br>
+
+        <button onclick="qian()">前一页</button>
+        <button onclick="hou()">后一页</button>
+        <button onclick="qian02()">前两页</button>
+    </div>
+</body>
+</html>

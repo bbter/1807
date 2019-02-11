@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #con{
+            width: 400px;
+            height: 50px;
+            border: 1px black solid;
+        }
+
+        p,h3{
+            width:400px;
+            height: 25px;
+            background-color:lightgoldenrodyellow;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+用户名:<input type="text" name="username" id="username">
+密码:<input type="password" name="password" id="password">
+年龄:<input type="text" name="age" id="age">
+    <button id="btn_submit">提交</button>
+    <div id="con">
+
+    </div>
+    <div id="box_text">
+        <!--
+        国风·邶风·绿衣
+
+        先秦：佚名
+
+        绿兮衣兮，绿衣黄里。心之忧矣，曷维其已？(黄里 一作：黄裹)
+        绿兮衣兮，绿衣黄裳。心之忧矣，曷维其亡？
+        绿兮丝兮，女所治兮。我思古人，俾无訧兮。
+        絺兮绤兮，凄其以风。我思古人，实获我心。
+        -->
+        <h3 id="title">国风·邶风·绿衣</h3>
+        <p>绿兮衣兮，绿衣黄里。</p>
+        <p>心之忧矣，曷维其已？</p>
+        <p>绿兮衣兮，绿衣黄裳。</p>
+        <p>心之忧矣，曷维其亡？</p>
+        <p>绿兮丝兮，女所治兮。</p>
+        <p>我思古人，俾无訧兮。</p>
+        <p>絺兮绤兮，凄其以风。</p>
+        <p>我思古人，实获我心。</p>
+    </div>
+</body>
+<script src="../Day25/jquery-3.3.1.js"></script>
+<script>
+    $("#btn_submit").bind("click",function () {
+        data = {
+            username:$("#username").val(),
+            password:$("#password").val(),
+            age:$("#age").val(),
+        };
+        $.ajax({
+            url:"http://10.31.156.17/ajax_js_get.php", //待载入页面的URL地址
+            type:'GET', //请求方式GET、POST
+            data:data, //待发送 Key/value 参数。
+            //载入成功时回调函数。载入成功时回调函数。
+            success:function (response) {
+                console.log(response);
+                $("#con").text(response)
+            }
+        })
+    })
+</script>
+</html>

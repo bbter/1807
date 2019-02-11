@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>document对象</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            console.log(document.title);
+            console.log(document.URL);
+            console.log(document.domain);
+            console.log(document.doctype);
+        };
+        function btn_submit(){
+            // var username_in = document.getElementById("username_id");
+            // var username_in = document.getElementsByClassName("username_class")[0];
+            var username_in = document.getElementsByClassName("username_class")[1];
+            console.log(username_in);
+            username = username_in.value;
+            alert(username);
+        }
+
+        function get_item() {
+            var li_item = document.getElementById("sport");
+            var li_items_name = document.getElementsByName("item_news");
+            console.log(li_item);
+            console.log(li_items_name);
+            console.log(li_items_name[0]);
+        }
+
+        function get_item_class() {
+            var li_item_class = document.getElementsByClassName("news");
+            console.log(li_item_class);
+            console.log(li_item_class[0]);
+        }
+        function get_item_tagName() {
+            var li_item_tags = document.getElementsByTagName("li");
+            console.log(li_item_tags);
+            console.log(li_item_tags[0]);
+        }
+        function btn_write() {
+            document.write("啦啦啦啦")
+        }
+        document.write("哈哈哈");
+        function btn_open() {
+            var docTxt = document.open("text/html","replace");
+            var txt = "<html><body>学习python真有趣</body></html>";
+            docTxt.write(txt);
+            docTxt.close();
+        }
+        function btn_close() {
+            document.close()
+        }
+</script>
+</head>
+<body>
+    用户名:<input type="text" class="username_class" name="username_name" id="username_id"  placeholder="用户名">
+    用户名:<input type="text" class="username_class" name="username_name01" id="username_id01"  placeholder="用户名">
+    <button onclick="btn_submit()">提交</button>
+    <ol>
+        <li class="news" name="item_news" id="sport">体育</li>
+        <li class="news" name="item_news" id="movie">电影</li>
+        <li class="news" name="item_news" id="yule">娱乐</li>
+        <li class="news" name="item_news" id="caipiao">彩票</li>
+        <li class="news" name="item_news" id="car">汽车</li>
+        <li class="news" name="item_news" id="meizhuang">美妆</li>
+    </ol>
+    <button onclick="get_item()">点我</button>
+    <button onclick="get_item_class()">通过class找到标签</button>
+    <button onclick="get_item_tagName()">通过tagName找到标签</button>
+    <br>
+    <button onclick="btn_write()">写到本页面</button>
+    <button onclick="btn_open()">open</button>
+    <button onclick="btn_close()">close</button>
+</body>
+</html>

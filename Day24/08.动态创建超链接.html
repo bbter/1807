@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function add_href() {
+            // 找到父标签
+            var ol_main = document.getElementById("ol_main");
+            // 创建子标签
+            var li_a = document.createElement("a");
+            // 给子标签添加内容
+            var txt = document.createTextNode("百度一下，你就知道");
+            // 给子标签添加属性
+            li_a.appendChild(txt);
+            li_a.setAttribute("href","http://www.baidu.com/");
+            // 把子标签放入父标签
+            ol_main.appendChild(li_a);
+        }
+    </script>
+</head>
+<body>
+    <ol id="ol_main">
+        <li id="li_href">友情链接</li>
+    </ol>
+    <button onclick="add_href()">添加链接</button>
+</body>
+</html>

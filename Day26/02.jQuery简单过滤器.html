@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="box">
+        <ol id="nav00">
+            <li id="li01">百度</li>
+            <li id="li02" class="li00">新浪</li>
+            <li id="li03">腾讯</li>
+            <li id="li04" class="li00">微博</li>
+            <li id="li05">网易</li>
+        </ol>
+    </div>
+</body>
+<script src="../Day25/jquery-3.3.1.js"></script>
+<script>
+    var $li_item01 = $("li:first");
+    console.log($li_item01);
+
+    var $li_item02 = $("li:last");
+    console.log($li_item02);
+
+    var $li_item03 = $("li:even");
+    console.log($li_item03);
+
+    var $li_item04 = $("li:odd");
+    console.log($li_item04);
+
+    var $li_item05 = $("li:eq(-1)");
+    console.log($li_item05);
+
+    var $li_item06 = $("li:gt(2)");
+    console.log($li_item06);
+
+    var $li_item07 = $("li:lt(2)");
+    console.log($li_item07);
+
+    var $li_item08 = $("li:not(#li03)");
+    console.log($li_item08);
+</script>
+</html>

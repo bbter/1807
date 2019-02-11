@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #con{
+            width: 700px;
+            height: auto;
+            border: 1px black solid;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="con">
+        <button id="btn_add">刷新</button>
+    </div>
+
+</body>
+<script src="../Day25/jquery-3.3.1.js"></script>
+<script>
+    $("#btn_add").bind("click",function () {
+        $.ajax({
+            url:"http://10.31.156.17/news.php",
+            type:"POST",
+            success:function (response) {
+                for(i=0;i<JSON.parse(response).length;i++){
+                    $("<a href='#'>"+JSON.parse(response)[i].title+"-----"+JSON.parse(response)[i].date+"</a><br><br>").insertBefore($("#btn_add"))
+                }
+            }
+        })
+    })
+</script>
+</html>

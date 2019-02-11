@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			img {
+				width: 300px;
+				position: absolute;
+				left: 300px;
+				top: 200px;
+			}
+			
+			img:hover {
+				animation: 5s anim;
+			}
+			
+			@keyframes anim {
+				from {
+					left: 300px;
+					top: 200px;
+					transform: scale(1) rotate(0deg);
+				}
+				
+				to {
+					left: 600px;
+					top: 100px;
+					transform: scale(1.5) rotate(360deg);
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<img src="../Day01/img/pic05.jpg" />
+	</body>
+
+</html>

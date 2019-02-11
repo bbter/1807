@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p{
+            width: 150px;
+            height: 30px;
+        }
+        #con01{
+            background-color: red;
+        }
+        #con02{
+            background-color: green;
+        }
+        #con03{
+            background-color: blue;
+        }
+        #con04{
+            background-color: saddlebrown;
+        }
+    </style>
+</head>
+<body>
+    <h3 id="title">望庐山瀑布</h3>
+    <p id="con01">日照香炉生紫烟</p>
+    <p id="con02">遥看瀑布挂前川</p>
+    <p id="con03">飞流直下三千尺</p>
+    <p id="con04"><a href="http://www.jd.com">疑是银河落九天</a></p>
+</body>
+<script src="../Day25/jquery-3.3.1.js"></script>
+<script>
+    $("#con04").css({
+        width:"200px",
+        fontSize:"30px",
+
+    });
+
+    $("#con03").width("50px");
+
+    $("#con02").height("200px");
+
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3 id="title">望庐山瀑布</h3>
+    <p id="con01">日照香炉生紫烟</p>
+    <p id="con02">遥看瀑布挂前川</p>
+    <p id="con03">飞流直下三千尺</p>
+    <p id="con04"><a href="http://www.jd.com">疑是银河落九天</a></p>
+</body>
+<script src="../Day25/jquery-3.3.1.js"></script>
+<script>
+    //获取单个element内容
+    var $title = $("h3").text();
+    console.log($title);
+    //获取全部element内容
+    var $con = $("p").text();
+    console.log($con);
+
+    $("#con03").text("遥看瀑布挂前川");
+
+    $("#con02").text("<a href=\'http://www.jd.com\'>疑是银河落九天</a>");
+
+    $("p").text("日照香炉生紫烟")
+
+</script>
+</html>

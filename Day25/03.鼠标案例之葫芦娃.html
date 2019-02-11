@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        ol{
+            margin-left: 200px;
+        }
+        li{
+            width: 300px;
+            height: 50px;
+        }
+        #box{
+            width: 300px;
+            height: auto;
+            margin-left: 200px;
+            background-color:lightgoldenrodyellow;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>红娃</li>
+        <li>橙娃</li>
+        <li>黄娃</li>
+        <li>绿娃</li>
+        <li>青娃</li>
+        <li>蓝娃</li>
+        <li>紫娃</li>
+        <li>金刚葫芦娃</li>
+    </ol>
+    <div id="box"></div>
+</body>
+<script type="text/javascript">
+    // 找到所有标签
+    var box = document.getElementById("box");
+    var arr_li = document.getElementsByTagName("li");
+    // 创建展示信息
+    var arrMsg = [
+					"力大无穷，巨大化。(弱点：比较鲁莽，不知随机应变)",
+					"千里眼，顺风耳，灵活聪明，机敏过人，最善于谋划计策(弱点：攻击力与其兄弟相比较过于弱小了，眼睛和耳朵太脆弱)",
+					"铜头铁臂，钢筋铁骨，刀枪不入（弱点：第一部中根本就是没有弱点，但可以以柔克刚降服他。可是到了第二部就被强行加入了一个致命弱点：怕打屁股。性急骄傲）。",
+					"喷火，吸火，霹雳(弱点：受不了激将法，也怕冷)",
+					"吸水，吐水，口吐闪电产生降雨(弱点：水火不相溶，意气用事。第一部中水娃的能力也是没有弱点的，不用吸水也能喷水喷得无穷无尽。到了第二部就变得需要先吸水才能吐水，水量有限。）",
+					"隐身术，透体术，来无影去无踪，聪明机灵，最善于偷盗和行动(弱点：太顽皮。在第一部里能够在被金蛇冰封的情况下透体而出，在第二部前半段能够使用透体术逃出鳄鱼头领爪子的紧紧捉拿，直到被捉的那一下透体术就使不出来了)",
+					"最小，没多大本领，倍受哥哥们的关爱，有宝葫芦，可以吸入魔法、兵器和妖怪，在第一部刚出世时蒙蔽双眼，十分听从妖精的话，把六位哥哥吸进宝葫芦。(弱点:失去宝葫芦，到第二部中宝葫芦那么容易就碎了)",
+					"葫芦娃的合体，七颗葫芦娃的心都溶在他的胸中，七个葫芦娃的本领都长在他的身上，同时也具有七个葫芦娃的弱点。他大闹妖精洞府后，闯入十八层地道，毁掉青蛇精的两件宝物。后变成一座大山，镇压了青蛇精."];
+
+    // 给所有标签添加监听
+    for (var i = 0;i<arr_li.length;i++){
+        // 记录每一个li标签的下标
+        arr_li[i].index = i;
+        // 给每一个li添加监听
+        arr_li[i].onmousemove = function (event) {
+            // 设置盒子内容
+            arr_li[this.index].style.backgroundColor = "yellow";
+            box.innerHTML = arrMsg[this.index];
+            // 设置盒子的位置
+            box.style.left = event.clientX - 180 + "px";
+            box.style.top = event.clientY + "px";
+        };
+        arr_li[i].onmouseout = function (event) {
+            box.innerHTML = "";
+            arr_li[this.index].removeAttribute("style")
+        }
+    }
+</script>
+</html>

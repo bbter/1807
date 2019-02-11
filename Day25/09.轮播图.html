@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div{
+            width: 800px;
+            height: 400px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<div><img id="pic" src="./imgs/1.jpg"></div>
+</body>
+<script type="text/javascript">
+    var pic = document.getElementById("pic");
+    setInterval("change_pic()",1000);
+    var page_num = 1;
+    function change_pic() {
+        // 改变图片的资源位置
+        pic.src = "./imgs/"+ page_num +".jpg";
+        page_num++;
+        // 防止图片数目超标
+        if(page_num >8){
+            page_num = 1
+        }
+    }
+</script>
+</html>

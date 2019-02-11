@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        // BOM对象方法
+        function open_page() {
+            window.open("../Day23/MyWolong.html")
+        }
+        function open_alert() {
+            window.alert("我是提示框")
+        }
+        function open_prompt() {
+            window.prompt("请输入一个数字")
+        }
+        function open_confirm() {
+            window.confirm("确定退出吗")
+        }
+        function open_print() {
+            window.print()
+        }
+        setTimeout(function show() {
+            console.log("hello")
+        },3000);
+
+        /*setInterval(function show00() {
+            console.log("啦啦啦")
+        },2000);*/
+
+        var timer = setInterval(show01,2000);
+        var i = 10;
+        function show01() {
+            console.log(i);
+            i--;
+            if(i==0){
+                console.log("计时结束");
+                clearInterval(timer)
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="open_page()">转到</button>
+    <button onclick="open_alert()">弹框</button>
+    <button onclick="open_prompt()">输入</button>
+    <button onclick="open_confirm()">对话</button>
+    <button onclick="open_print()">打印</button>
+</body>
+</html>

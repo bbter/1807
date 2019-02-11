@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div{
+            width: 500px;
+            height: 200px;
+            background-color: yellow;
+        }
+    </style>
+    <script type="text/javascript">
+        function qian() {
+            window.history.forward();
+        }
+        function hou() {
+            window.history.back();
+        }
+        function qian02() {
+            window.history.go(2);
+        }
+
+        function to_history01() {
+            window.location.href = "history01.html"
+        }
+        function to_history03() {
+            window.location.href = "history03.html"
+        }
+        function to_history02() {
+            window.location.href = "history02.html"
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <button onclick="to_history02()">history02</button>
+        <button onclick="to_history03()">history03</button>
+        <button onclick="to_history01()">history01</button>
+        <a href="history02.html">history02</a>
+        <a href="history03.html">history03</a>
+        <a href="history01.html">history01</a>
+        <br>
+
+        <button onclick="qian()">前一页</button>
+        <button onclick="hou()">后一页</button>
+        <button onclick="qian02()">前两页</button>
+    </div>
+</body>
+</html>

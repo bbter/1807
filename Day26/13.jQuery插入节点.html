@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 300px;
+            height: auto;
+            border: 1px red solid;
+
+        }
+        #box01{
+            width: 300px;
+            height: auto;
+            border: 1px blue solid;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <p id="con01">哈哈哈哈哈哈</p>
+    </div>
+    <div id="box01">
+
+    </div>
+</body>
+<script src="../Day25/jquery-3.3.1.js"></script>
+<script>
+    var $title = $("<h3><a href='http://www.baidu.com/'>题竹林寺</a></h3>");
+    console.log($title);
+    $("#box").append($title);
+
+    var $title01 = $("<h3><a href='http://www.baidu.com/'>题竹林寺</a></h3>");
+    $title01.appendTo($("#box01"));
+
+    var $con02 = $("<p id=\'con02\'>啦啦啦啦啦</p>");
+    $("#con01").after($con02);
+
+    var $con03 = $("<p id=\'con03\'>嘻嘻嘻嘻嘻</p>");
+    $con03.insertAfter($("#con01"));
+
+    var $con04 = $("<p id=\'con04\'>呵呵呵呵呵</p>");
+    $("#con01").before($con04);
+
+    var $con05 = $("<p id=\'con05\'>啊啊啊啊啊</p>");
+    $con05.insertBefore($("#con04"));
+</script>
+</html>

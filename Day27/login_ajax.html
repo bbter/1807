@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+用户名:<input type="text" name="username" id="username">
+密码:<input type="password" name="password" id="password">
+年龄:<input type="text" name="age" id="age">
+邮箱: <input type="email" id="email">
+<button id="btn_submit">登录</button>
+</body>
+<script src="../Day25/jquery-3.3.1.js"></script>
+<script>
+    $("#btn_submit").bind("click",function () {
+        data = {
+            username:$("#username").val(),
+            password:$("#password").val(),
+            age:$("#age").val(),
+            emai:$("#email").val(),
+        };
+        $.ajax({
+            url:"http://10.31.156.17/ajax_js_get.php", //待载入页面的URL地址
+            type:'GET', //请求方式GET、POST
+            data:data, //待发送 Key/value 参数。
+            //载入成功时回调函数。载入成功时回调函数。
+            success:function (response) {
+                console.log(response);
+                $("#con").text(response)
+            }
+        })
+    })
+</script>
+</html>

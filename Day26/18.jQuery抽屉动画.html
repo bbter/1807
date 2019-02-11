@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+    <button id="btn_down">slidedown</button>
+    <button id="btn_up">slideup</button>
+    <button id="btn_toggle">slideToggle</button>
+</body>
+<script src="../Day25/jquery-3.3.1.js"></script>
+<script>
+    var $box = $("#box");
+    var $btn_down = $("#btn_down");
+    var $btn_up = $("#btn_up");
+    var $btn_toggle = $("#btn_toggle");
+
+    $btn_down.bind("click",func_down);
+    $btn_up.bind("click",func_up);
+    $btn_toggle.bind("click",func_toggle);
+    
+    function func_down() {
+        $box.slideDown(2000,function () {
+            alert("下滑成功")
+        })
+    }
+
+    function func_up() {
+        $box.slideUp(2000,function () {
+            alert("上滑成功")
+        })
+    }
+
+    function func_toggle() {
+        $box.slideToggle(2000,function () {
+            alert("切换成功")
+        })
+    }
+</script>
+</html>

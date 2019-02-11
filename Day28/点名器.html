@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 280px;
+            height: 80px;
+            background-color: gold;
+            margin: auto;
+            margin-top: 300px;
+            text-align: center;
+            line-height: 80px;
+            font-weight: bold;
+            font-size: 30px;
+
+        }
+        #btn_start{
+            width: 80px;
+            height: 40px;
+            margin-top: 20px;
+            margin-left: 900px;
+            background-color:blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">点名器</div>
+    <button id="btn_start">开始</button>
+</body>
+<script src="../Day25/jquery-3.3.1.js"></script>
+<script>
+    var flag = true;
+    var arr_name = ["小红","小蓝","小绿","小黑","小白","小紫"];
+    index = 0;
+    $("#btn_start").bind("click",function () {
+        if (flag==true){
+            $("#btn_start").css("background-color","red").text("停止");
+            run_name = setInterval(func,50);
+            flag = false
+        }else {
+            clearInterval(run_name);
+            $("#btn_start").css("background-color","green").text("开始");
+            flag = true
+        }
+    });
+    function func(){
+            $("#box").text(arr_name[Math.floor(Math.random()*6)]);
+            index++;
+    }
+
+</script>
+</html>

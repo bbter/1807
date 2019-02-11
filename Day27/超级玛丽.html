@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>超级玛丽</title>
+    <style>
+        body{
+            background-image: url("bg.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            /*-moz-background-size: 100% 100%;*/
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+        #xiaoguai{
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            top: 400px;
+        }
+    </style>
+</head>
+<body>
+<img src="xiaoguai.jpg" id="xiaoguai">
+</body>
+<script src="../Day25/jquery-3.3.1.js"></script>
+<script>
+    setInterval(func,0);
+    function func() {
+        function to_r() {
+            $("#xiaoguai").animate({
+                left:"1400px"
+            },4000)
+        }
+
+        function to_l() {
+            $("#xiaoguai").animate({
+                left:"0px"
+            },4000)
+        }
+        to_r();
+        to_l();
+    }
+</script>
+</html>

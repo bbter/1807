@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3 id="title" class="title">减字木兰花·卖花担上</h3>
+<p id="con01" class="con">卖花担上。买得一枝春欲放。</p>
+<p id="con02" class="con">泪染轻匀。犹带彤霞晓露痕。</p>
+<p id="con03">怕郎猜道。奴面不如花面好。</p>
+<p id="con04">云鬓斜簪。徒要教郎比并看。</p>
+</body>
+<script src="jquery-3.3.1.js"></script>
+<script>
+    var $id_title = $("#title");
+
+    var $cls_title = $(".title");
+
+    var $tag_title = $("h3");
+    console.log($id_title);
+    console.log($cls_title);
+    console.log($tag_title);
+
+    var $p_items = $("#con01,#con03");
+    console.log($p_items);
+
+    var $all = $("*");
+    console.log($all)
+</script>
+</html>

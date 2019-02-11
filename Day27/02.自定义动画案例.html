@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-image: url("../Day25/imgs/bg.jpg");
+            background-repeat: repeat;
+        }
+
+        img{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+<script src="../Day25/jquery-3.3.1.js"></script>
+<script>
+
+    setInterval(func,2000);
+
+    function func() {
+        var $fireworm = $("<img src='../Day25/imgs/萤火虫.jpg'>");
+        $("body").append($fireworm);
+        $fireworm.css({
+            left:Math.random()*1000 + "px",
+            top:Math.random()*500 + "px",
+        });
+        function fly() {
+            $fireworm.animate({
+                left:Math.random()*1000 + "px",
+                top:Math.random()*500 + "px",},
+                2000,
+                function () {
+                    fly()
+            })
+        }
+        fly()
+    }
+</script>
+</html>

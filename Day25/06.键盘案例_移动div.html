@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #box{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+</body>
+<script type="text/javascript">
+    document.onkeydown = function (event) {
+        // 找到盒子
+        var box = document.getElementById("box");
+        switch (event.keyCode) {
+            case 37:
+                box.style.left = box.offsetLeft - 5 + "px";
+                break;
+            case 38:
+                box.style.top = box.offsetTop - 5 + "px";
+                break;
+            case 39:
+                box.style.left = box.offsetLeft + 5 + "px";
+                break;
+            case 40:
+                box.style.top = box.offsetTop + 5 + "px";
+                break
+        }
+    }
+</script>
+</html>

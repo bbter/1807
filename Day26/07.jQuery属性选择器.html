@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="box">
+        <ol id="nav00">
+            <li id="li01" name="con">百度</li>
+            <li id="li02" class="li00 con" name="con">新浪</li>
+            <li id="li03" name="con">腾讯</li>
+            <li id="li04" class="li00" name="con">微博</li>
+            <li id="li05">网易</li>
+        </ol>
+    </div>
+</body>
+<script src="../Day25/jquery-3.3.1.js"></script>
+<script>
+    var $li_item01 = $("li[class]");
+    console.log($li_item01);
+
+    var $li_item02 = $("li[id=li03]");
+    console.log($li_item02);
+
+    var $li_item03 = $("li[id!=li03]");
+    console.log($li_item03);
+
+    var $li_item04 = $("li[id*=03]");
+    console.log($li_item04);
+
+    var $li_item05 = $("li[class^=li00]");
+    console.log($li_item05);
+
+    var $li_item06 = $("li[class*=con]");
+    console.log($li_item06);
+
+    var $li_item07 = $("li[class$=con]");
+    console.log($li_item07);
+</script>
+</html>

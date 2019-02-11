@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #content{
+            width: 500px;
+            height: 50px;
+            border: 1px blue solid;
+        }
+    </style>
+</head>
+<body>
+    用户名: <input type="text" name="username" id="username">
+    密码: <input type="password" name="password" id="password">
+    年龄: <input type="text" name="age" id="age">
+    <button id="btn_submit">提交</button>
+    <div id="content"></div>
+</body>
+<script>
+     // 通过id所有element
+    var username = document.getElementById("username");
+    var password = document.getElementById("password");
+    var age = document.getElementById("age");
+    var button = document.getElementById("btn_submit");
+    var con = document.getElementById("content");
+
+    // 响应按钮的点击
+    button.onclick = function () {
+        // 获取输入的内容
+        username = username.value;
+        password = password.value;
+        age = age.value;
+
+        // 创建XMLHttpRequest对象
+        var xhr = new XMLHttpRequest();
+        //与服务器建立链接
+        var url = "http://10.31.156.17/ajax_js_post.php";
+        xhr.open("post",url,true);
+        // 拼接数据
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset-UTF-8');
+        var str = url + "username=" + username +"&password=" + password +"&age=" + age;
+        // 发送请求
+        xhr.send(str);
+        // 监听服务器响应
+            xhr.onreadystatechange = function () {
+                if(xhr.readyState == 4 && xhr.status == 200){
+                        // 已经接收到全部响应数据，执行以下操作
+                        console.log("请求成功");
+                        con.innerHTML = xhr.response
+            }
+
+        }
+    }
+</script>
+</html>

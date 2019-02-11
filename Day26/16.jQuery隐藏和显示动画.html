@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+    <button id="btn_show">显示</button>
+    <button id="btn_hide">隐藏</button>
+    <button id="btn_switch">切换</button>
+</body>
+<script src="../Day25/jquery-3.3.1.js"></script>
+<script>
+    var $box = $("#box");
+    var $btn_switch = $("#btn_switch");
+    var $btn_show = $("#btn_show");
+    var $btn_hide = $("#btn_hide");
+
+    $btn_show.bind("click",func_show);
+    $btn_hide.bind("click",func_hide);
+    $btn_switch.bind("click",func_switch);
+    
+    function func_show() {
+        $box.show(1000,function () {
+            alert("显示完成")
+        })
+    }
+
+    function func_hide() {
+        $box.hide(1000,function () {
+            alert("隐藏完成")
+        })
+    }
+
+    function func_switch() {
+        // toggle 如果显示就隐藏，如果隐藏就显示
+        $box.toggle(1000,function () {
+            alert("切换完成")
+        })
+    }
+</script>
+</html>

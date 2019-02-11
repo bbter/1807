@@ -1,0 +1,117 @@
+body{
+    background: #f7f7f7;
+    color: #666;
+    font: 12px/24px "微软雅黑","华文细黑",Arial,sans-serif;
+    padding: 0;
+    margin: 0;
+    cursor: default;
+
+}
+.top-bars{
+    width: 960px;
+    position: absolute;
+    height: 30px;
+    top: 14px;
+    left: 50%;
+    margin-left: -480px;
+    z-index: 10;
+}
+.search-box{
+    width: 165px;
+    height: 23px;
+    overflow: hidden;
+    background: url(../img/searchbg.png) no-repeat;
+}
+dl{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+dt{
+    display: block;
+}
+.search-box{
+    float: right;
+}
+.search-input{
+    width: 127px;
+    height: 17px;
+    padding: 3px 5px;
+    line-height: 17px;
+    overflow: hidden;
+    border: 0;
+    background: none;
+}
+.search-button{
+    width: 28px;
+    height: 23px;
+    overflow: hidden;
+    line-height: 23px;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+input{
+    outline: none;
+    margin: 0;
+    -webkit-appearance: textfield;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    padding: 1px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    -webkit-writing-mode: horizontal-tb !important;
+
+}
+.top-menu{
+    width: 411px;
+    padding-right: 15px;
+    float: right;
+}
+.clearUl{
+    zoom: 1;
+}
+ol,ul,li{
+    list-style: none outside none;
+}
+.top-menu li{
+    float: left;
+    padding: 0 4px;
+    color: #c8d3eb;
+}
+.top-menu li a{
+    color: #fff;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+ul{
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+li{
+    display: list-item;
+    text-align: -webkit-match-parent;
+}

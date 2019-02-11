@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        var timer = setInterval(show,1000);
+        var i = 1;
+        function show() {
+            console.log(i);
+            i++;
+            if(i==11){
+                console.log("计时结束");
+                clearInterval(timer)
+            }
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

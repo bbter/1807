@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box01{
+            text-align: center;
+            margin: auto;
+            width: 50%;
+            height: 500px;
+            background-color:lightgoldenrodyellow;
+            padding-top: 100px;
+
+        }
+    </style>
+    <script type="text/javascript">
+        function get_con() {
+            var title = document.getElementById("title");
+            var p_items = document.getElementsByTagName("p");
+            console.log(title.innerHTML);
+            console.log(title.innerText);
+            for (var i = 0;i < p_items.length;i++){
+                console.log(p_items[i].innerHTML)
+            }
+        }
+        
+        function modify_con() {
+            var title = document.getElementById("title");
+            // title.innerHTML = "行香子·七夕<br>宋代：李清照"
+            title.innerHTML = "行香子·七夕<br>宋代：<a href='https://baike.baidu.com/item/%E6%9D%8E%E6%B8%85%E7%85%A7/6351?fr=aladdin'>李清照</a>"
+        }
+    </script>
+</head>
+<body>
+    <div id="box01">
+            <!--行香子·七夕
+
+        宋代：李清照
+
+        草际鸣蛩。惊落梧桐。正人间、天上愁浓。云阶月地，关锁千重。纵浮槎来，浮槎去，不相逢。
+        星桥鹊驾，经年才见，想离情、别恨难穷。牵牛织女，莫是离中。甚霎儿晴，霎儿雨，霎儿风-->。
+        <h3 id="title">行香子·七夕</h3>
+        <p id="con01">草际鸣蛩。惊落梧桐。正人间、天上愁浓。</p>
+        <p id="con02">云阶月地，关锁千重。纵浮槎来，浮槎去，不相逢。</p>
+        <p id="con03">星桥鹊驾，经年才见，想离情、别恨难穷。</p>
+        <p id="con04">牵牛织女，莫是离中。甚霎儿晴，霎儿雨，霎儿风。</p>
+        <button onclick="get_con()">输出到控制台</button>
+        <button onclick="modify_con()">修改标签内容</button>
+    </div>
+</body>
+</html>

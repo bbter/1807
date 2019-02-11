@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#">
+    用户名:<input type="text">
+    <br>
+    密码:<input type="password">
+    <br>
+    <input type="hidden" value="写错啦">
+</form>
+</body>
+<script src="../Day25/jquery-3.3.1.js"></script>
+<script>
+    var input_item01 = $("input:hidden");
+    console.log(input_item01);
+
+    var input_item02 = $("input:visible");
+    console.log(input_item02)
+</script>
+</html>

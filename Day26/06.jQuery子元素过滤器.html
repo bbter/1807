@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="box">
+        <ol id="nav00">
+            <li id="li01">百度</li>
+            <li id="li02" class="li00">新浪</li>
+            <li id="li03">腾讯</li>
+            <li id="li04" class="li00">微博</li>
+            <li id="li05">网易</li>
+            <p id="con01">床前明月光
+                <span>李白</span>
+            </p>
+        </ol>
+    </div>
+</body>
+<script src="../Day25/jquery-3.3.1.js"></script>
+<script>
+    var $first_li = $("li:first-child");
+    console.log($first_li);
+
+    var $first = $("li:first");
+    console.log($first);
+
+    var $last_li = $("li:last-child");
+    console.log($last_li);
+
+    var $only = $("span:only-child");
+    console.log($only);
+
+    var $n_li = $("li:nth-child(3)");
+    console.log($n_li)
+</script>
+</html>

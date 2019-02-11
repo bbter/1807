@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 200px;
+            height: auto;
+            border: 1px black solid;
+        }
+        li{
+            width: 150px;
+            height: 30px;
+            border: 1px red solid;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <ol id="ol00">
+            <li>网页</li>
+            <li>百科</li>
+            <li>知道</li>
+            <li>地图</li>
+        </ol>
+    </div>
+    <button id="add">添加内容</button>
+</body>
+<script src="../Day25/jquery-3.3.1.js"></script>
+<script>
+    var arr_title = ["视频","音乐","图片","生活","新闻","图片"];
+    var index = 0;
+    $("#add").bind("click",function () {
+        $("#ol00").append($("<li>"+arr_title[index%arr_title.length]+"</li>"));
+        index++;
+    })
+</script>
+</html>

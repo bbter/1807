@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        // 第一种方式
+        /*var student = new Object();
+        student.name = "bbter";
+        student.age = 20;
+        student.height = 180;
+        student.weight = 60;
+        student.show = function () {
+            console.log("this is show")
+        };
+        student.study = function () {
+            console.log(this.name + "正在学习")
+        };
+        student.plagGame = function () {
+            console.log(this.name + "正在plagGame")
+        };
+        console.log(student.name);
+        console.log(student.age);
+        console.log(student.height);
+        console.log(student.weight);
+        student.show();
+        student.study();
+        student.plagGame();*/
+
+        //第二种方式:
+        var student = {
+            name:"bbter",
+            age:18,
+            height:180,
+            weight:60,
+            show:function () {
+                console.log("this is show")
+            },
+            study:function () {
+                console.log(this.name + "正在学习")
+            },
+            plagGame:function () {
+                console.log(this.name + "正在plagGame")
+            }
+        };
+        console.log(student.name);
+        console.log(student.age);
+        console.log(student.height);
+        console.log(student.weight);
+        student.show();
+        student.study();
+        student.plagGame();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

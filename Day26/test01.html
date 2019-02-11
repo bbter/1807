@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+        <!--竹里馆(王维)
+		山中送别(王维)
+		问刘十九(白居易)
+		哥舒歌(西鄙人)
+		静夜思(李白)
+		怨情(李白)
+		登乐游原(李商隐)
+		听筝(李端)
+		渡汉江(宋之问)-->
+    <div id="box">
+
+    </div>
+        <button id="btn_mix">组合动画</button>
+    <ol>
+        <li>行宫(元稹)</li>
+        <li>登鹳雀楼(王之涣)</li>
+        <li>新嫁娘词(王建)</li>
+        <li>相思(王维)</li>
+        <li>杂诗(王维)</li>
+        <li>鹿柴(王维)</li>
+    </ol>
+    请输入诗词名:<input type="text" id="input01"><button id="btn_add">添加</button>
+        <br>
+    请输入诗词名:<input type="text" id="input02"><button id="btn_del">删除</button>
+</body>
+<script src="../Day25/jquery-3.3.1.js"></script>
+<script>
+    $("#btn_add").bind("click",function () {
+        var $ol = $("ol");
+        var add_txt = $("#input01").val();
+        $ol.append($("<li><a href='http://gushiwen.org'>"+add_txt+"</a></li>"))
+    });
+
+    $("#btn_del").bind("click",function () {
+        var del_txt = $("#input02").val();
+        var $li_del = $("li:contains("+del_txt+")");
+        $li_del.remove()
+    });
+
+    var $box = $("#box");
+    var $btn_mix = $("#btn_mix");
+    $btn_mix.bind("click",func_mix);
+
+    function func_mix() {
+        $box.fadeOut(2000,function () {
+            $box.fadeIn(2000,function () {
+                alert("组合动画成功")
+            })
+        })
+    }
+</script>
+</html>

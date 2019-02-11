@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function add_hero() {
+            var ol_heros = document.getElementById("ol_heros");
+            var txt = document.getElementById("a").value;
+            var li_item = document.createElement("li");
+            var li_txt = document.createTextNode(txt);
+            li_item.appendChild(li_txt);
+            ol_heros.appendChild(li_item);
+            alert("添加成功")
+        }
+        function del_hero() {
+            var ol_heros = document.getElementById("ol_heros");
+            var id_num = document.getElementById("b").value;
+            var li_item = document.getElementsByTagName("li")[id_num-1];
+            ol_heros.removeChild(li_item);
+            alert("删除成功")
+        }
+        function replace_hero() {
+            var ol_heros = document.getElementById("ol_heros");
+            var id_num = document.getElementById("c").value;
+            var li_old_item = document.getElementsByTagName("li")[id_num-1];
+            var new_li = document.createElement("li");
+            var txt_value = document.getElementById("d").value;
+            var txt = document.createTextNode(txt_value);
+            new_li.appendChild(txt);
+            ol_heros.replaceChild(new_li,li_old_item);
+            alert("替换成功")
+        }
+    </script>
+</head>
+<body>
+    <ol id="ol_heros">
+        <li id="hero01">钢铁侠</li>
+        <li id="hero02">蜘蛛侠</li>
+        <li id="hero03">雷神</li>
+        <li id="hero04">美国队长</li>
+        <li id="hero05">绿巨人</li>
+    </ol>
+    请输入英雄名字:<input type="text" id="a" ><button onclick="add_hero()">添加</button>
+    <br>
+    请输入id:<input type="text" id="b" ><button onclick="del_hero()">删除</button>
+    <br>
+    请输入id:<input type="text" id="c" >请输入替换内容:<input type="text" id="d" ><button onclick="replace_hero()">替换</button>
+</body>
+</html>

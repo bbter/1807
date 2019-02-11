@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function get_con() {
+            var username_in = document.getElementById("username");
+            console.log("tagName:"+ username_in.tagName);
+            console.log("value:"+username_in.value);
+            console.log("id:"+username_in.id);
+            console.log("className:"+username_in.className);
+            console.log("name:"+username_in.name);
+        }
+    </script>
+</head>
+<body>
+用户名:<input type="text"  id="username" value="root">
+<button onclick="get_con()">提交</button>
+</body>
+</html>

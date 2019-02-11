@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        console.log(location.href);
+        console.log(location.host);
+        console.log(location.hostname);
+        console.log(location.port);
+        console.log(location.protocol);
+
+        console.log(location.pathname);
+        function jump() {
+            location.href = "history01.html"
+        }
+        function assign00() {
+            location.assign(
+                "history01.html"
+            )
+        }
+        function replace00() {
+            location.replace(
+                "history01.html"
+            )
+        }
+        function reload00() {
+            location.reload()
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="username" placeholder="用户名">
+    <button onclick="jump()">跳</button>
+    <button onclick="assign00()">assign00</button>
+    <button onclick="replace00()">replace00</button>
+    <button onclick="reload00()">reload00</button>
+</body>
+</html>

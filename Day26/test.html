@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="box">
+        <h3 id="title">橘柚垂华实</h3>
+        <p id="con01">橘柚垂华实，乃在深山侧。</p>
+        <p id="con02" class="con02">闻君好我甘，窃独自雕饰。</p>
+        <p id="con03">委身玉盘中，历年冀见食。</p>
+        <p id="con04">芳菲不相投，青黄忽改色。</p>
+        <p id="con05">人倘欲我知，因君为羽翼。</p>
+        <a href="http://www.baidu.com">百度一下，你就知道！</a>
+    </div>
+</body>
+<script src="../Day25/jquery-3.3.1.js"></script>
+<script>
+    var $title = $("#title");
+    console.log($title);
+    var $first = $("p:first");
+    console.log($first);
+    console.log($("p:contains('好')"));
+    console.log($("p:last"));
+    console.log($("p:even"));
+    console.log($("p:odd"));
+    console.log($("p:gt(2)"));
+    console.log($("p:lt(2)"));
+    console.log($("p:eq(1)"));
+    console.log($("p:not(#con01)"));
+    console.log($("div a"));
+    console.log($("div>a"));
+    console.log($("#con01+p"));
+    console.log($("#con01~p"));
+</script>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    标题: <input type="text" id="title">
+    日期: <input type="date" id="date">
+    链接: <input type="text">
+    <button id="btn_submit">提交</button>
+</body>
+<script src="../Day25/jquery-3.3.1.js"></script>
+<script>
+$("#btn_submit").bind("click",function () {
+        $.ajax({
+            url:"http://10.31.156.17/ajax_js_get.php",
+            type:"GET",
+            success:function (response) {
+
+            }
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    用户名: <input type="text" name="username" id="username">
+    密码: <input type="password" name="password" id="password">
+    年龄: <input type="text" name="age" id="age">
+    <button id="btn_submit">提交</button>
+</body>
+<script>
+    // 通过id所有element
+    var username = document.getElementById("username");
+    var password = document.getElementById("password");
+    var age = document.getElementById("age");
+    var button = document.getElementById("btn_submit");
+
+    // 响应按钮的点击
+    button.onclick = function () {
+        // 获取输入的内容
+        username = username.value;
+        password = password.value;
+        age = age.value;
+
+        // 创建XMLHttpRequest对象
+        var xhr = new XMLHttpRequest();
+        //与服务器建立链接
+        var url = "http://10.31.156.17/ajax_js_get.php";
+        var str = url + "?" + "username=" + username +"&password=" + password +"&age=" + age;
+        xhr.open("get",str,true);
+        // 发送请求
+        xhr.send();
+        // 监听服务器响应
+            xhr.onreadystatechange = function () {
+                if(xhr.readyState == 4 && xhr.status == 200){
+                        // 已经接收到全部响应数据，执行以下操作
+                        var data = xhr.responseText;
+                        console.log(data)
+            }
+
+        }
+    }
+</script>
+</html>

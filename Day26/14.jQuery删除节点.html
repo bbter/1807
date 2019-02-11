@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <!--元日
+
+    宋代：王安石
+
+    爆竹声中一岁除，春风送暖入屠苏。
+    千门万户曈曈日，总把新桃换旧符。-->
+    <h3 id="title">元日</h3>
+    <p id="con01">爆竹声中一岁除，
+    <span>哈哈哈哈</span>
+    </p>
+    <p id="con02">春风送暖入屠苏。</p>
+    <p id="con03">千门万户曈曈日，</p>
+    <p id="con04">总把新桃换旧符。</p>
+</body>
+<script src="../Day25/jquery-3.3.1.js"></script>
+<script>
+    var $p_last01 = $("p:last");
+    $p_last01.remove();
+
+    var $p_last02 = $("p:last");
+    $p_last02.detach();
+
+    //清空节点内容
+    var $p_items = $("p");
+    $p_items.empty();
+</script>
+</html>

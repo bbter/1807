@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="btn-haha">点我</button>
+</body>
+<script type="text/javascript">
+    var btn_haha = document.getElementById("btn-haha");
+    btn_haha.onclick = function () {
+        console.log("我被单击了")
+    };
+    btn_haha.ondblclick = function () {
+        console.log("我被双击了")
+    };
+    btn_haha.onmousedown = function () {
+        console.log("鼠标按下")
+    };
+    btn_haha.onmouseup= function () {
+        console.log("鼠标抬起")
+    };
+    btn_haha.onmouseover= function () {
+        console.log("鼠标悬浮")
+    };
+    btn_haha.onmouseout= function () {
+        console.log("鼠标移出")
+    };
+    btn_haha.onmousewheel= function () {
+        console.log("鼠标滚动")
+    };
+</script>
+</html>

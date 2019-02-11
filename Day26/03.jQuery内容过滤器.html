@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li{
+            width: 100px;
+            height: 30px;
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <ol id="nav00">
+            <li id="li01">百度</li>
+            <li id="li02" class="li00">新浪</li>
+            <li id="li03">腾讯</li>
+            <li id="li04" class="li00">微博</li>
+            <li id="li05">网易</li>
+            <li id="li06"></li>
+            <li id="li07"></li>
+            <li id="li08">百度云</li>
+            <li id="li09">一百元</li>
+        </ol>
+    </div>
+</body>
+<script src="../Day25/jquery-3.3.1.js"></script>
+<script>
+    var $li_item01 = $("li:contains('百')");
+    console.log($li_item01);
+
+    var $li_item02 = $("li:empty");
+    console.log($li_item02);
+
+    var $li_item03 = $("ol:has(li)");
+    console.log($li_item03);
+
+    var $li_item04 = $("li:parent");
+    console.log($li_item04);
+</script>
+</html>

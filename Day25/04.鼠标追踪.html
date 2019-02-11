@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{
+            background-image: url("./imgs/bg.jpg");
+        }
+        #chongzi{
+            width: 50px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <img id="chongzi" src="./imgs/萤火虫.jpg">
+</body>
+<script type="text/javascript">
+    var chong = document.getElementById("chongzi");
+    chong.onmousedown = function (event) {
+        //获取图片被点击时的位置
+        var x = event.clientX;
+        var y = event.clientY;
+        // 给图片添加移动的监听
+        chong.onmousemove = function (event) {
+            // 图片跟着光标移动
+            chong.style.left = event.clientX - 25 +"px";
+            chong.style.top = event.clientY - 25 +"px";
+        };
+    };
+         //结束监听
+    chong.ondblclick = function (event) {
+        chong.onmousemove = null;
+    };
+</script>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function add_item() {
+            // 找到父标签
+            var ol_news = document.getElementById("ol_news");
+            // 创建li标签
+            var li_item = document.createElement("li");
+            // 创建内容
+            var li_txt = document.createTextNode("地图");
+            // 把内容放入li标签
+            li_item.appendChild(li_txt);
+            // 把li标签放入ol列表
+            ol_news.appendChild(li_item);
+        }
+        function del_item() {
+            // 找到父级标签
+            var ol_news = document.getElementById("ol_news");
+            // 找到子级标签
+            var li_movie = document.getElementById("li_movie");
+            // 从父级标签中删除子级标签
+            ol_news.removeChild(li_movie);
+        }
+        function replace_text() {
+            // 找到要替换内容的父标签
+            var ol_news = document.getElementById("ol_news");
+            // 创建新的标签
+            var new_li = document.createElement("li");
+            // 给新标签添加内容
+            var txt = document.createTextNode("年货节");
+            // 把新标签的内容添加到标签内
+            new_li.appendChild(txt);
+            // 找到被替换的标签
+            var old_li = document.getElementById("li_gowu");
+            // 执行替换
+            ol_news.replaceChild(new_li,old_li)
+        }
+        function insert_text() {
+            // 找到要替换内容的父标签
+            var ol_news = document.getElementById("ol_news");
+            // 创建新的标签
+            var li_new = document.createElement("li");
+            // 给新标签添加内容
+            var txt_arr = ["要文","国内","国际","社会","军事"];
+            var index = Math.floor(Math.random()*5);
+            var li_txt = document.createTextNode(txt_arr[index]);
+            li_new.appendChild(li_txt);
+            //找到第一个标签
+            var first_li = document.getElementsByTagName("li")[0];
+            // 执行替换
+            ol_news.insertBefore(li_new,first_li);
+        }
+    </script>
+</head>
+<body>
+    <ol id="ol_news">
+        <li id="li_movie" name="item_news" class="news">电影</li>
+        <li id="li_tiyu" name="item_news" class="news">体育</li>
+        <li id="li_meizhuang" name="item_news" class="news">美妆</li>
+        <li id="li_youxi" name="item_news" class="news">游戏</li>
+        <li id="li_gowu" name="item_news" class="news">购物</li>
+    </ol>
+    <button onclick="add_item()">添加内容</button>
+    <button onclick="del_item()">移除内容</button>
+    <button onclick="replace_text()">替换内容</button>
+    <button onclick="insert_text()">添加置顶内容</button>
+</body>
+</html>

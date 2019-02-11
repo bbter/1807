@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #box01{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            position: absolute;
+        }
+        #box02{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            position: absolute;
+        }
+        #box03{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+        <div id="box01" name="box1">
+            <div id="box02" name="box2">
+                <div id="box03" name="box03">
+
+                </div>
+            </div>
+        </div>
+</body>
+<script type="text/javascript">
+    var box01 = document.getElementById("box01");
+    var box02 = document.getElementById("box02");
+    var box03 = document.getElementById("box03");
+
+    box01.addEventListener("click",func,false);
+    box02.addEventListener("click",func,false);
+    box03.addEventListener("click",func,false);
+
+    function func() {
+        console.log(this)
+    }
+</script>
+</html>

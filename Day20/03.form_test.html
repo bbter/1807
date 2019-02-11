@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="account_info" style="width: 800px;height: 1000px;background-color:cornsilk;margin:0 auto">
+        <h2 style="padding: 30px">账户信息</h2>
+        <table align="center" cellpadding="5px" cellspacing="5px">
+            <tr>
+                <td align="right">用户名</td>
+                <td>
+                    <input type="text" name="username" placeholder="用户名" style="width: 200px;height: 20px">
+                </td>
+            </tr>
+            <tr>
+                <td>设置密码</td>
+                <td>
+                    <input type="password" name="password" placeholder="请输入密码"  style="width: 200px;height: 20px">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    确认密码
+                </td>
+                <td>
+                    <input type="password" name="repassword" placeholder="确认密码"  style="width: 200px;height: 20px">
+                </td>
+            </tr>
+        </table>
+        <h2 style="padding: 30px">企业及联系人信息</h2>
+        <table align="center" cellpadding="5px" cellspacing="5px">
+            <tr>
+                <td>公司名称</td>
+                <td>
+                    <input type="text" name="com_name" placeholder="单位执照名称">
+                </td>
+            </tr>
+            <tr>
+                <td>公司地址</td>
+                <td>
+                    <select id="province_id" name="province_id" class="mar" tabindex="5" >
+                            <option value="0">请选择</option><option value="111">北京</option><option value="112">天津</option><option value="113">河北</option><option value="114">山西</option><option value="115">内蒙古</option><option value="121">辽宁</option><option value="122">吉林</option><option value="123">黑龙江</option><option value="131">上海</option><option value="132">江苏</option><option value="133">浙江</option><option value="134">安徽</option><option value="135">福建</option><option value="136">江西</option><option value="137">山东</option><option value="141">河南</option><option value="142">湖北</option><option value="143">湖南</option><option value="144">广东</option><option value="145">广西</option><option value="146">海南</option><option value="150">重庆</option><option value="151">四川</option><option value="152">贵州</option><option value="153">云南</option><option value="154">西藏</option><option value="161">陕西</option><option value="162">甘肃</option><option value="163">青海</option><option value="164">宁夏</option><option value="165">新疆</option><option value="171">台湾</option><option value="172">香港</option><option value="173">澳门</option>
+                    </select>
+                    <select id="city_id" name="city_id" class="mar" tabindex="6" >
+                                            <option value="0">请选择</option><option value="1901">杭州市</option><option value="1905">宁波市</option><option value="1906">温州市</option><option value="1903">嘉兴市</option><option value="1902">湖州市</option><option value="1914">绍兴市</option><option value="1910">金华市</option><option value="1908">衢州市</option><option value="1904">舟山市</option><option value="1939">台州市</option><option value="1943">丽水市</option>
+                        </select>
+                    <select id="town_id" name="town_id" class="companyarea" tabindex="7">
+                        <option value="0">请选择</option><option value="1330101">上城区</option><option value="1330102">下城区</option><option value="1330103">江干区</option><option value="1330104">拱墅区</option><option value="1330105">西湖区</option><option value="1933">滨江区</option><option value="1330107">萧山区</option><option value="1330108">余杭区</option><option value="1911">建德市</option><option value="1948">富阳区</option><option value="1949">临安区</option><option value="1950">桐庐县</option><option value="1951">淳安县</option>
+                        </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="text" name="addr" placeholder="街道名称">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="checkbox" name="agree" value="yes">
+                    我已阅读并同意 <a href="#">《当当交易条款》</a>和 <a href="#">《当当社区条款》</a>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <a href="#" style="background: red;width: 178px;height: 44px;display:inline-block;text-align: center;border-radius: 22px;line-height: 44px;text-decoration: none;color: white">立即注册</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
